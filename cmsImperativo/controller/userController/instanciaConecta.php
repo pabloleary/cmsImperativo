@@ -1,0 +1,3 @@
+<?php
+$conecta = new Conecta();
+?>
