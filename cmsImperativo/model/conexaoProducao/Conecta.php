@@ -9,10 +9,10 @@ class Conecta{
 		private $mysqli;
 		*/
 		
-		private $servidor   =   "200.234.202.101";   
-		private $usuario    =   "sysbyte11";        
-		private $senha      =   "aprobr123";  
-		private $bd         =   "sysbyte11";       
+		private $servidor   =   "";   
+		private $usuario    =   "";        
+		private $senha      =   "";  
+		private $bd         =   "";       
 		private $mysqli;
 
 
