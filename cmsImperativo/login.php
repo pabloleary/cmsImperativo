@@ -27,6 +27,7 @@ display: block;
 </head>
 
 <body>
+<h1>Hello Ireland</h1>
 <?php
 include("subpagina/login.php");
 ?>

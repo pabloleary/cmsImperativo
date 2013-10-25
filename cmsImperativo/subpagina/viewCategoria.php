@@ -1,10 +1,10 @@
 <br />
 <div class="acao">
-<a href="arquivosUpload.php">upload de arquivos</a>
+<a href="arquivosUpload.php">Upload Files</a>
 &nbsp;&nbsp;&nbsp;
-<a href="criarCategoria.php">Inserir Categoria</a>
+<a href="criarCategoria.php">Insert Category</a>
 &nbsp;&nbsp;&nbsp;
-<a href="criarCategoria.php">Visualizar Categorias</a>
+<a href="criarCategoria.php">View Category</a>
 
 <!--
 <img src="criar.gif">
@@ -17,9 +17,9 @@
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
 <tr>
 <!--<th align="left">Pai da categoria</th>-->
-<th align="left">Categoria</th>
-<th>editar</th>
-<th>apagar</th>
+<th align="left">Category</th>
+<th>Edit</th>
+<th>Delete</th>
 </tr>
 <?php 
 if($dados){
@@ -30,13 +30,13 @@ foreach($dados as $value){?>
 /*   <td>  <?=$value["paicategoria"]?>
        </td>
 	*/   ?>
-    <td><?=$value["categoria"]?></td>
+    <td><?php print $value["category"]?></td>
  	 
 	 <td align="center">
-   <a href="viewCategoriaAtualizar.php?id=<?=$value['id']?>"> <img src="img/editar.gif"/></a>
+   <a href="viewCategoriaAtualizar.php?id=<?php print $value['id']?>&action=view"> <img src="img/editar.gif"/></a>
     </td>
 	<td align="center">
-     <a href="controller/delete/deleteCategoria.php?id=<?=$value['id']?>"><img src="img/apagar.gif"/></a>
+     <a href="controller/CategoryController.php?id=<?php print $value['id']?>&action=delete"><img src="img/apagar.gif"/></a>
     </td>
 </tr>
 <?}}

@@ -1,6 +1,9 @@
 <?php
 session_start();
-include("controller/viewEventoUnico.php");
+//include("controller/viewEventoUnico.php");
+include("controller/EventController.php");
+
+
 ?>
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
@@ -9,11 +12,11 @@ include("controller/viewEventoUnico.php");
 </head>
 <body>
 <div id="topo">
-<? include("subpagina/navegacao.php")?>
+<?php include("subpagina/navegacao.php")?>
 </div>
 
 <div id="principal">
-<? include("subpagina/update/atualizarEvento.php")?>
+<?php include("subpagina/update/atualizarEvento.php")?>
 </div>
 
 <div id="rodape">

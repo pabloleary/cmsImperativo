@@ -1,19 +1,19 @@
 <?php
 class DaoNoticia{
 
-	static private $insert = "INSERT INTO aprobasnoticia VALUES (
-					NULL , ?, ?, ?, ?, ?);";
+	static private $insert = "INSERT INTO noticia VALUES (
+					NULL , ?, ?, ?, ?);";
 					
 	
-	static private $delete     = "DELETE FROM aprobasnoticia WHERE id= ?";
+	static private $delete     = "DELETE FROM noticia WHERE id= ?";
 	
-	static private $select    = "SELECT * FROM aprobasnoticia"; 
+	static private $select    = "SELECT * FROM noticia"; 
 
-    static private $noticiasHome    = "SELECT * FROM aprobasnoticia ORDER BY id DESC LIMIT 0,3";
+    static private $noticiasHome    = "SELECT * FROM noticia ORDER BY id DESC LIMIT 0,3";
 
-	static private $select2   = "SELECT * FROM aprobasnoticia WHERE id= ?"; 
+	static private $select2   = "SELECT * FROM noticia WHERE id= ?"; 
 	
-	static private $atualizar = "UPDATE aprobasnoticia SET titulo = ? , resumo = ? , conteudo = ? where id = ?";
+	static private $atualizar = "UPDATE noticia SET titulo = ? , resumo = ? , conteudo = ? where id = ?";
 					
 	private $conecta;
 	private $noticia;
@@ -24,12 +24,15 @@ class DaoNoticia{
 	}
 	
 	function inserir(){
+		
+	//print_r($this->noticia);
+	//exit;	
 	$stmt = $this->conecta->getConexao()->prepare(self::$insert);
-	$stmt->bind_param("sssss",$this->noticia->getTitulo(),
+	$stmt->bind_param("ssss",$this->noticia->getTitulo(),
 							  $this->noticia->getResumo(),	
 							  $this->noticia->getConteudo(),
-							  $this->noticia->getData(),
-							  $this->noticia->getStatus());
+							  $this->noticia->getData()
+							);
 	$stmt->execute();
 	}
 		
@@ -40,10 +43,13 @@ class DaoNoticia{
 	}
 	
 	function visualizarTudo(){
+	
 	$dados = null;
+	
 	$stmt = $this->conecta->getConexao()->query(self::$select);	
+	
 	while($row = $stmt->fetch_array()){
-	$dados[] = $row;
+		$dados[] = $row;
 	}
 	return $dados;
 	}
@@ -60,7 +66,7 @@ class DaoNoticia{
 
 	
 	function visualizarID($id){
-	$stmt = $this->conecta->getConexao()->query("SELECT * FROM aprobasnoticia WHERE id= $id");
+	$stmt = $this->conecta->getConexao()->query("SELECT * FROM noticia WHERE id= $id");
 	$dados = $stmt->fetch_array();
 	return $dados;
 	}

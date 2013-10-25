@@ -1,7 +1,8 @@
 <?php
 session_start();
 include("controller/logando.php");
-include("controller/viewCadastradosCMS.php");?>
+include("controller/insertUserRegister.php");
+?>
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <head>
@@ -11,7 +12,7 @@ include("controller/viewCadastradosCMS.php");?>
 
 
 <div id="topo">
-<? include("subpagina/navegacao.php")?>
+<?php include("subpagina/navegacao.php")?>
 </div>
 
 <div id="nav">
@@ -19,7 +20,7 @@ include("controller/viewCadastradosCMS.php");?>
 </div>
 
 <div id="principal">
-<? include("subpagina/cadastrados.php")?>
+<?php include("subpagina/cadastrados.php")?>
 </div>
 
 

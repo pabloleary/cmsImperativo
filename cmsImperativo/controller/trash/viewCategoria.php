@@ -1,7 +1,7 @@
 <?php
-include("../cms/model/Conecta.php");
-include("../cms/model/beans/Categoria.php");
-include("../cms/model/dao/DaoCategoria.php");
+include("model/Conecta.php");
+include("model/beans/Categoria.php");
+include("model/dao/DaoCategoria.php");
 
 $conexao       = new Conecta();
 $categoria    = new Categoria("","");

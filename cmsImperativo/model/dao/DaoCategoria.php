@@ -1,11 +1,11 @@
 <?php
 class DaoCategoria{
     
-    static private $insert          = "INSERT INTO aprobascategoria VALUES ( NULL , ? , ?)";
-    static private $delete          = "DELETE FROM aprobascategoria WHERE id= ?";
-    static private $select          = "SELECT * FROM aprobascategoria";
-    static private $selectgroups    = "SELECT * FROM aprobascategoria GROUP BY categoria  ORDER BY categoria asc";
-    static private $atualizar       = "UPDATE aprobascategoria SET categoria = ? , paicategoria= ? where id = ?";
+    static private $insert          = "INSERT INTO category VALUES ( NULL , ?)";
+    static private $delete          = "DELETE FROM category WHERE id= ?";
+    static private $select          = "SELECT * FROM category";
+    static private $selectgroups    = "SELECT * FROM category GROUP BY categoria  ORDER BY categoria asc";
+    static private $atualizar       = "UPDATE category SET category = ? where id = ?";
 
     private $conecta;
     private $categoria;
@@ -17,12 +17,12 @@ class DaoCategoria{
 
     function inserir(){
         $stmt = $this->conecta->getConexao()->prepare(self::$insert);
-        $stmt->bind_param("ss",$this->categoria->getCategoria(),
-            $this->categoria->getPaiCategoria());
+        $stmt->bind_param("s",$this->categoria->getCategoria());
         $stmt->execute();
     }
 
     function visualizarTudo(){
+    	$dados = null;
         $stmt = $this->conecta->getConexao()->query(self::$select);
         while($row = $stmt->fetch_array()){
             $dados[] = $row;
@@ -40,7 +40,7 @@ class DaoCategoria{
 
     
     function visualizarID($id){
-	$stmt = $this->conecta->getConexao()->query("SELECT * FROM aprobascategoria WHERE id= $id" );
+	$stmt = $this->conecta->getConexao()->query("SELECT * FROM category WHERE id= $id" );
 	$dados = $stmt->fetch_array();
 	return $dados;
 	}
@@ -52,9 +52,10 @@ class DaoCategoria{
     }
 
      function atualizar($id){
+		print_r($id);
+		//exit;
         $stmt = $this->conecta->getConexao()->prepare(self::$atualizar);
-        $stmt->bind_param("ssi",$this->categoria->getCategoria(),
-                                $this->categoria->getPaiCategoria(),
+        $stmt->bind_param("si",$this->categoria->getCategoria(),                                
                                 $id);
         $stmt->execute();
     }

@@ -1,31 +1,31 @@
-<? include("controller/viewFaleConosco.php");?>
+<?php include("controller/ContactController.php");?>
 <br />
 <div class="corpodados">
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
 <tr>
-<th align="left">nome</th>
-<th align="left">email</th>
-<th align="left">mensagem</th>
-<th align="left">data</th>
+<th align="left">Name</th>
+<th align="left">E-mail</th>
+<th align="left">Message</th>
+<th align="left">Date</th>
 
-<th>apagar</th>
+<th>Delete</th>
 </tr>
 
-<? if($dados){
+<?php if($dados){
 foreach($dados as $value){
 ?>
 <tr>
    <td>
-     <?=$value['nome']?>
+     <?php print $value['nome']?>
     </td>
-    <td><?=$value['email']?></td>
-    <td><?=$value['comentario']?></td>
+    <td><?php print $value['email']?></td>
+    <td><?php print $value['comentario']?></td>
  <td align="left">
-      <?=$value['data']?>
+      <?php print $value['data']?>
     </td>
  
 	<td align="center">
-   <a href="controller/deleteFaleConosco.php?id=<?=$value['id']?>">   <img src="img/apagar.gif"/></a>
+   <a href="controller/ContactController.php?id=<?php print $value['id']?>&action=delete">   <img src="img/apagar.gif"/></a>
     </td>
 </tr>
 <?}}?>

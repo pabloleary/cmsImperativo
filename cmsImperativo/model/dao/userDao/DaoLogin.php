@@ -4,12 +4,12 @@ class DaoLogin{
 	static private $conecta;
 	private $modelLogin;
 
-	static private $insert = "INSERT INTO `userlogin` VALUES (
+	static private $insert = "INSERT INTO `login` VALUES (
 						NULL , ?, ? , ?);";
 
-	static private $select = "SELECT * FROM `userlogin`";
+	static private $select = "SELECT * FROM `login`";
 	
-	static private $delete = "DELETE FROM `userlogin` WHERE id = ?";
+	static private $delete = "DELETE FROM `login` WHERE id = ?";
 
 	function __construct(Login $modelLogin,Conecta $conecta){
 		$this->modelLogin    = $modelLogin;

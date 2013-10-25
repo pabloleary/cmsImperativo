@@ -49,11 +49,8 @@ background-color:#99CC00;
 </style>
 <br />
 <div class="acao">
- <a href="cadastrar.php">visualizar cadastrados</a>
+ <a href="cadastrar.php">View Users</a>
  &nbsp;&nbsp;&nbsp;
- <a href="cadastroDeUsuario.php">adicionar Usuário Profissional</a>
-   </div>
-
 <form method="post" action="controller/userController/insereUsuario.php" >
 
      <fieldset>

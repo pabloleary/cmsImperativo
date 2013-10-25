@@ -1,6 +1,8 @@
 <?php
 session_start();
 include("controller/logando.php");
+include("controller/NewsController.php");
+
 ?>
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">

@@ -1,4 +1,4 @@
-<?
+<?php
 include("../modelCMS/conectaClasse.php");
 include("../modelCMS/DaoCadastroClasse.php");
 include("../modelCMS/DaoLoginClasse.php");

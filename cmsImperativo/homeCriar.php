@@ -1,4 +1,4 @@
-<? 
+<?php 
 session_start();
 include("controller/logando.php");
 ?>
@@ -11,11 +11,11 @@ include("controller/logando.php");
 
 
 <div id="topo">
-<? include("subpagina/navegacao.php")?>
+<?php include("subpagina/navegacao.php")?>
 </div>
 
 <div id="principal">
-<? include("subpagina/insert/insercaoNoticia.php")?>
+<?php include("subpagina/insert/insercaoNoticia.php")?>
 </div>
 
 <div id="rodape">

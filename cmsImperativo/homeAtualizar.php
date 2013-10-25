@@ -1,7 +1,8 @@
-<? 
+<?php 
 session_start();
 include("controller/logando.php");
-include("controller/viewNoticiaUnica.php");
+//include("controller/viewNoticiaUnica.php");
+include("controller/NewsController.php");
 ?>
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
@@ -12,11 +13,11 @@ include("controller/viewNoticiaUnica.php");
 
 
 <div id="topo">
-<? include("subpagina/navegacao.php")?>
+<?php include("subpagina/navegacao.php")?>
 </div>
 
 <div id="principal">
-<? include("subpagina/update/atualizarNoticia.php")?>
+<?php include("subpagina/update/atualizarNoticia.php")?>
 </div>
 
 <div id="rodape">

@@ -1,4 +1,4 @@
-<? 
+<?php 
 //include("../../../controller/logando.php");
 include("controller/viewEventoUnico.php");
 ?>

@@ -1,17 +1,21 @@
 <?php
 /*test*/
-/*
-print "<pre>";
-print_r($daoViewCadastrado->view());
-print "</pre>"
-*/
+
+/*print "<pre>";
+print_r($dados);
+print "</pre>";
+//exit;*/
 
 ?>
-	<br />
+<br />
 <div class="acao">
-<a href="cadastroDeUsuario.php">adicionar Usuário Profissional</a>
+<a href="userRegister.php">Add User</a>
 &nbsp;&nbsp;&nbsp;
-<a href="cadastroDeUsuarioComum.php">adicionar Usuário Comum</a>
+<a href="cadastroDeUsuario.php">Add Aditional User Professional Information</a>
+&nbsp;&nbsp;&nbsp;
+<a href="cadastroDeUsuarioComum.php">Add Aditional User Information</a>
+
+
 <!--
 <img src="criar.gif">
 <img src="editar.gif">
@@ -23,13 +27,13 @@ print "</pre>"
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
 <tr>
 <th align="left">id</th>
-<th align="left">nome</th>
-<th align="left">cpf</th>
-<th align="left">data de inscrição</th>
-<th align="left">data de expiração</th>
-<th align="left">status do usuario</th>
-<th align="center">editar</th>
-<th align="center">apagar</th>
+<th align="left">Name</th>
+<th align="left">Login</th>
+<th align="left">Initial Date</th>
+<th align="left">End Date</th>
+<th align="left">User Status</th>
+<th align="center">Update</th>
+<th align="center">Delete</th>
 </tr>
 
 <?php
@@ -43,21 +47,21 @@ print "</pre>";
 */
 ?>
 <tr>
-	<td align="left"><?=$value[0]?></td>
-    <td align="left"> <a href="cadastroUnico.php?id=<?=$value['idpessoa']?>"><?=$value["nome"]?></a></td>
-    <td align="left"><?=$value["cpf"]?></td>
-    <td align="left"><?=$value["sexo"]?></td>
+	<td align="left"><?php print $value['id']?></td>
+    <td align="left"> <a href="cadastroUnico.php?id=<?php print $value['id']?>">name</a></td>
+    <td align="left"><?php print $value["login"]?></td>
+    <td align="left">InitialDate</td>
     <td> 
-     <?=$value['estadocivil']?>
+     EndDate
     </td>
     <td>
-      <?=$value['email']?>
+      UserStatus
     </td>
 	 <td align="center">
-    <a href="cadastrarUserUpdate.php?id=<?=$value['id']?>"> <img src="img/editar.gif"/></a>
+    <a href="controller/insertUserRegister.php?action=update&id=<?php print $value['id']?>"> <img src="img/editar.gif"/></a>
     </td>
 	<td align="center">
-     <a href="controller/userController/delete/deleteUser.php?id=<?=$value['id']?>"><img src="img/apagar.gif"/></a>
+     <a href="controller/insertUserRegister.php?action=update&id=<?php print $value['id']?>"><img src="img/apagar.gif"/></a>
     </td>
 	</tr>
 <?php 

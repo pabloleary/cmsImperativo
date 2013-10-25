@@ -1,7 +1,8 @@
 <?php
 session_start();
 include("controller/logando.php");
-include("controller/viewUpload.php");
+//include("controller/viewUpload.php");
+include("controller/RepositoryController.php");
 ?>
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
@@ -10,15 +11,13 @@ include("controller/viewUpload.php");
 </head>
 <body id="duascolunas">
 
-
 <div id="topo">
-<? include("subpagina/navegacao.php")?>
+<?php include("subpagina/navegacao.php")?>
 </div>
 
 <div id="principal">
-<? include("subpagina/listarArquivos.php")?>
+<?php include("subpagina/listarArquivos.php")?>
 </div>
-
 
 </body>
 </html>

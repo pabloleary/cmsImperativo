@@ -15,7 +15,7 @@ include("controller/viewCadastradoUnico.php");
 </div>
 
 <div id="principal">
-<?php include("subpagina/update/formCadastroUpdate.php")?>
+<?php include("subpagina/formUserRegisterUpdate.php")?>
 </div>
 
 <div id="rodape">

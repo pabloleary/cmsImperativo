@@ -12,12 +12,12 @@ class DaoLogar {
 		echo $login;
 		echo $senha;
 
-		$stmt = $this->conecta->getConexao()->query("SELECT login,senha FROM aprobaslogin where login like '" . $login . "'");
+		$stmt = $this->conecta->getConexao()->query("SELECT login,senha FROM login where login like '" . $login . "'");
 
 		if ($stmt->num_rows) {
 			//$pass = md5($senha);
 			$pass = $senha;
-			$stmt = $this->conecta->getConexao()->query("SELECT login,senha FROM aprobaslogin where senha like '" . $pass . "'");
+			$stmt = $this->conecta->getConexao()->query("SELECT login,senha FROM login where senha like '" . $pass . "'");
 			//return $stmt->fetch_object();
 			return true;
 		} else

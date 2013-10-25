@@ -1,10 +1,10 @@
 <br />
 <div class="acao">
-<a href="arquivosUpload.php">upload de arquivos</a>
+<a href="arquivosUpload.php">Upload File</a>
 &nbsp;&nbsp;&nbsp;
-<a href="criarCategoria.php">Inserir Categoria</a>
+<a href="criarCategoria.php">Insert Category</a>
 &nbsp;&nbsp;&nbsp;
-<a href="criarCategoria.php">Visualizar Categorias</a>
+<a href="viewCategoria.php">View Category</a>
 <!--
 <img src="criar.gif">
 <img src="editar.gif">
@@ -15,28 +15,28 @@
 <div class="corpodados">
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
 <tr>
-<th align="left">nome Arquivo</th>
-<th align="left">categoria</th>
-<th align="left">data</th>
-<th align="left">status</th>
+<th align="left">File Name</th>
+<th align="left">Category</th>
+<th align="left">Date</th>
+<th align="left">Status</th>
 <!--
 <th>despublicar</th>
 -->
-<th>editar</th>
-<th>apagar</th>
+<th>Edit</th>
+<th>Delete</th>
 </tr>
-<? 
+<?php
 if($dados){
 foreach($dados as $value){?>
 <tr>
    <td> 
    
-      <?=$value['nome']?>
+      <?php print $value['nome']?>
     </td>
-    <td><?=$value['categoria']?></td>
+    <td><?php print $value['categoria']?></td>
     <td align="left"><?=$value['data']?></td>
     <td align="left"> 
-      <?=$value['status']?>
+      <?php print$value['status']?>
     </td>
  	 <!--
 	 <td align="center">
@@ -44,10 +44,10 @@ foreach($dados as $value){?>
     </td>
 	-->
 	 <td align="center">
-  <a href="fileUpdate.php?id=<?=$value['id']?>"> <img src="img/editar.gif"/></a>
+  <a href="fileUpdate.php?id=<?php print $value['id']?>&action=view"> <img src="img/editar.gif"/></a>
     </td>
 	<td align="center">
-		 <a href="controller/delete/deleteArquivo.php?id=<?=$value['id']?>">
+		 <a href="controller/RepositoryController.php?id=<?php print $value['id']?>&action=delete">
 			<img src="img/apagar.gif"/>
 		 </a>
     </td>

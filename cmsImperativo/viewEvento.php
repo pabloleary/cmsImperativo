@@ -7,12 +7,12 @@
 
 
 <div id="topo">
-<? include("subpagina/navegacao.php")?>
+<?php include("subpagina/navegacao.php")?>
 </div>
 
 
 <div id="principal">
-<? include("subpagina/viewEvento.php")?>
+<?php include("subpagina/viewEvento.php")?>
 </div>
 
 

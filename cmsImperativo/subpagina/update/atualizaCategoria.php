@@ -13,7 +13,7 @@
 </div>
 <br />
 <div class="corpodados">
-<form action="controller/update/atualizarCategoria.php?id=<?=$dados["id"]?>" method="post">
+<form action="controller/CategoryController.php?id=<?php print $dados["id"]?>&action=update" method="post">
 <?php
 /*
 <label>Pai da Categoria</label>
@@ -32,7 +32,7 @@
 </select>
 */?>
 <input type="hidden" name="paiCategoria" value="raiz"/>
-<label>Nome da Categoria<input type="text" name="categoria" value="<?=$dados['categoria']?>"/></label>
+<label>Nome da Categoria<input type="text" name="categoria" value="<?php print $dados['category']?>"/></label>
 <input type="submit" value="criar categoria">
 </form>
 

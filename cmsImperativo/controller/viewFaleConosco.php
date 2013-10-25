@@ -1,4 +1,5 @@
-<?
+<?php
+
 include("model/Conecta.php");
 include("model/beans/FaleConosco.php");
 include("model/dao/DaoFaleConosco.php");

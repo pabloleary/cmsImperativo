@@ -29,8 +29,19 @@ include("model/Conecta.php");
 include("model/dao/DaoViewCadastrado.php");
 
 $conecta           = new Conecta();
-$daoViewCadastrado = new DaoViewCadastrado($conecta);
-$dados             = $daoViewCadastrado->view();
+//$daoViewCadastrado = new DaoViewCadastrado($conecta);
+//$dados             = $daoViewCadastrado->view();
+$dados = null;
+
+$dados[0]["nome"]="user1";
+$dados[0]["cpf"]="cpf";
+$dados[0]["sexo"]="sexo";
+$dados[0]["email"]="email";
+$dados[0]["estadocivil"]="email";
+ 
+
+
+
 /*
 print "<pre>";
 print_r($dados);

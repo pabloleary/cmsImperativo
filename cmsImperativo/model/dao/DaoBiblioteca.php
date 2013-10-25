@@ -1,12 +1,12 @@
 <?php
 class DaoBiblioteca{
 
-    static private $insertUpload = "INSERT INTO `aprobasarquivo` VALUES (
-    NULL , ?, ? , ? , ?, ? , ? , ? , ? );";
-    static private $deleteFile = "DELETE FROM `aprobasarquivo` WHERE id= ?";
-    static private $select = "SELECT * FROM `aprobasarquivo`";
-    static private $selectgroups    = "SELECT * FROM aprobasarquivo GROUP BY categoria";
-    static private $atualizar = "UPDATE aprobasarquivo SET nome = ? , descricao = ? , categoria = ? , status = ? where id = ?";
+    static private $insertUpload = "INSERT INTO `arquivo` VALUES (
+    NULL , ?, ? , ? , ?, ? , ? );";
+    static private $deleteFile = "DELETE FROM `arquivo` WHERE id= ?";
+    static private $select = "SELECT * FROM `arquivo`";
+    static private $selectgroups    = "SELECT * FROM arquivo GROUP BY categoria";
+    static private $atualizar = "UPDATE arquivo SET nome = ? , descricao = ? , categoria = ? , status = ? where id = ?";
     private $conecta;
     private $biblioteca;
 
@@ -18,14 +18,12 @@ class DaoBiblioteca{
     function inserir(){
         try{  
             $stmt = $this->conecta->getConexao()->prepare(self::$insertUpload);
-            $stmt->bind_param("sssssssi",$this->biblioteca->getNome(),
+            $stmt->bind_param("ssssss",$this->biblioteca->getNome(),
                 $this->biblioteca->getData(),
                 $this->biblioteca->getDescricao(),
                 $this->biblioteca->getCategoria(),
                 $this->biblioteca->getStatus(),
-                $this->biblioteca->getFilename(),                
-                $this->biblioteca->getTipo(),
-                $this->biblioteca->getSize()
+                $this->biblioteca->getFilename()
             );
             $stmt->execute();
         }catch (Exception $e) {
@@ -58,7 +56,7 @@ class DaoBiblioteca{
 
 
     function visualizarID($id){
-        $stmt = $this->conecta->getConexao()->query("SELECT * FROM aprobasarquivo WHERE id= $id");
+        $stmt = $this->conecta->getConexao()->query("SELECT * FROM arquivo WHERE id= $id");
         $dados = $stmt->fetch_array();
         return $dados;
     }

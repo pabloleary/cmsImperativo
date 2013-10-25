@@ -11,12 +11,12 @@ include("controller/logando.php");
 
 
 <div id="topo">
-<? include("subpagina/navegacao.php")?>
+<?php include("subpagina/navegacao.php")?>
 </div>
 
 
 <div id="principal">
-<? include("subpagina/viewYoutube.php")?>
+<?php include("subpagina/viewYoutube.php")?>
 </div>
 
 

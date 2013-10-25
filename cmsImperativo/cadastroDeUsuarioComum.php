@@ -10,11 +10,11 @@ include("controller/logando.php");
 <body id="duascolunas">
 
 <div id="topo">
-<? include("subpagina/navegacao.php")?>
+<?php include("subpagina/navegacao.php")?>
 </div>
 
 <div id="principal">
-<? include("subpagina/formCadastroSimples.php")?>
+<?php include("subpagina/formCadastroSimples.php")?>
 </div>
 
 <div id="rodape">

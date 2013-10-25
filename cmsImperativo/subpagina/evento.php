@@ -1,12 +1,13 @@
 <?php
-include("controller/viewEvento.php");
+//include("controller/viewEvento.php");
+include("controller/EventController.php");
 /*print "<pre>";
 print_r($dados);
 print "</pre>";*/
 ?>
 <br />
 <div class="acao">
-<a href="eventoCriar.php">criar evento</a>
+<a href="eventoCriar.php">Insert Event</a>
 <!--
 <img src="criar.gif">
 <img src="editar.gif">
@@ -18,26 +19,26 @@ print "</pre>";*/
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
 <tr>
 
-<th align="left">titulo</th>
-<th align="left">preçoAvulso</th>
-<th align="left">preçoAssociado</th>
-<th align="left">data</th>
+<th align="left">Title</th>
+<th align="left">Price No Member</th>
+<th align="left">Price To Member</th>
+<th align="left">Date</th>
 <!--
 <th>publicar</th>
 <th>despublicar</th>
 -->
-<th>editar</th>
-<th>apagar</th>
+<th>Edit</th>
+<th>Delete</th>
 </tr>
-<?if($dados){
+<?php if($dados){
 
 foreach($dados as $value){?>
 <tr>
    
-      <td><a href="viewEvento.php?id=<?=$value['id']?>"><?=$value['titulo']?></a></td>
-   	 <td><?=$value['precoAvulso']?></td>
-	 <td><?=$value['precoAssociado']?></td>
-	  <td align="left"><?=$value['dataEvento']?></td>
+      <td><a href="viewEvento.php?id=<?php print $value['id']?>"><?php print $value['titulo']?></a></td>
+   	 <td><?php print $value['precoAvulso']?></td>
+	 <td><?php print $value['precoAssociado']?></td>
+	  <td align="left"><?php print $value['dataEvento']?></td>
     
 	<!--
 	<td align="center">
@@ -48,10 +49,10 @@ foreach($dados as $value){?>
     </td>
 	-->
 	 <td align="center">
-   <a href="eventosAtualizar.php?id=<?=$value['id']?>"> <img src="img/editar.gif"/></a>
+   <a href="eventosAtualizar.php?id=<?php print $value['id']?>&action=view"> <img src="img/editar.gif"/></a>
     </td>
 	<td align="center">
-     <a href="controller/delete/deleteEvento.php?id=<?=$value['id']?>"><img src="img/apagar.gif"/></a>
+     <a href="controller/EventController.php?id=<?php print $value['id']?>&action=delete"><img src="img/apagar.gif"/></a>
     </td>
 </tr>
 <?}}?>

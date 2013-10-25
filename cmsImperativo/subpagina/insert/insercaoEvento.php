@@ -1,6 +1,6 @@
 <br />
 <div class="acao">
-<a href="eventos.php">visualizar Evento</a>
+<a href="eventos.php">Event View</a>
 </div>
 <br />
 <div class="corpodados">
@@ -8,43 +8,43 @@
 
 <table>
 <tr><td><label for="status">Status</label>
-publicar<input type="radio" name="status" value="publicar"></td></tr>
-<tr><td>rascunho<input type="radio" name="status" value="rascunho"></td></tr>
+Publish<input type="radio" name="status" value="publicar"></td></tr>
+<tr><td>Draft<input type="radio" name="status" value="rascunho"></td></tr>
 </table>
 
 
-<label for="nome">Título
+<label for="nome">Title
 <input type="text" name="titulo"/>
 </label>
-<label for="descricao">Descrição
+<label for="descricao">Description
 <textarea name="descricao" rows="2" cols="20">
 </textarea>
 </label>
-<label for="data">Data do Evento
+<label for="data">Event Date
 <select name="dia">
-<? for($i=1;$i<=31;$i++){?>
-<option value="<?=$i?>"><?=$i?></option>
+<?php for($i=1;$i<=31;$i++){?>
+<option value="<?php print $i?>"><?php print $i?></option>
 <?}?>
 </select>
 <select name="mes">
-<? for($i=1;$i<=12;$i++){?>
-<option value="<?=$i?>"><?=$i?></option>
-<?}?>
+<?php for($i=1;$i<=12;$i++){?>
+<option value="<?php print $i?>"><?php print $i?></option>
+<?php }?>
 </select>
 
 <select name="ano">
-<? for($i=2008;$i<=2010;$i++){?>
-<option value="<?=$i?>"><?=$i?></option>
+<?php for($i=2008;$i<=2010;$i++){?>
+<option value="<?php print $i?>"><?php print $i?></option>
 <?}?>
 </select>
 </label>
 
-<label for="precoCadastrado">Preço Associado
+<label for="precoCadastrado">Price Member
 <input type="text" name="precoAssociado"/>
 </label>
-<label for="precoAvulso">Preço Avulso
+<label for="precoAvulso">Price No Member
 <input type="text" name="precoAvulso"/>
 </label>
-<input class="botaoTamanho" type="submit" name="submit" value="criar Evento"/>
+<input class="botaoTamanho" type="submit" name="submit" value="Insert Event"/>
 </form>
 </div>

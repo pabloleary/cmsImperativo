@@ -1,8 +1,8 @@
 <?php
 session_start();
 include("controller/logando.php");
-include("controller/viewCategoria.php");
-include("controller/viewFileUnico.php");
+include("controller/RepositoryController.php");
+
 ?>
 
 <html>

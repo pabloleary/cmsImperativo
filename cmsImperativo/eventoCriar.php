@@ -1,7 +1,6 @@
-<? 
+<?php 
 session_start();
 include("controller/logando.php");
-include("controller/viewNoticia.php");
 ?>
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
@@ -12,11 +11,11 @@ include("controller/viewNoticia.php");
 
 
 <div id="topo">
-<? include("subpagina/navegacao.php")?>
+<?php include("subpagina/navegacao.php")?>
 </div>
 
 <div id="principal">
-<? include("subpagina/insert/insercaoEvento.php")?>
+<?php include("subpagina/insert/insercaoEvento.php")?>
 
 </div>
 

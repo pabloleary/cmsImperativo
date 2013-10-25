@@ -1,11 +1,11 @@
 <?php
 class DaoCadastro{
 
-	static private $insert = "INSERT INTO aprobasusuario` VALUES (
+	static private $insert = "INSERT INTO usuario` VALUES (
 					NULL , ?, ?, ?);";
 	
-	static private $delete = "DELETE FROM aprobasusuario WHERE id= ?";
-	static private $select = "SELECT * FROM aprobasusuario"; 
+	static private $delete = "DELETE FROM usuario WHERE id= ?";
+	static private $select = "SELECT * FROM usuario"; 
 
 	
 	

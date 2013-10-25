@@ -11,7 +11,7 @@ include("controller/logando.php");
 
 
 <div id="topo">
-<? include("subpagina/navegacao.php")?>
+<?php include("subpagina/navegacao.php")?>
 </div>
 
 <div id="nav">
@@ -19,7 +19,7 @@ include("controller/logando.php");
 </div>
 
 <div id="principal">
-<? include("subpagina/faleConosco.php")?>
+<?php include("subpagina/faleConosco.php")?>
 </div>
 
 

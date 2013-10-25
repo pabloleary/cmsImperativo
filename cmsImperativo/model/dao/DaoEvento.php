@@ -1,16 +1,16 @@
 <?php
 class DaoEvento{
 
-	static private $insert = "INSERT INTO aprobasevento VALUES (
-					NULL , ?, ?, ?, ?, ?, ?);";
+	static private $insert = "INSERT INTO evento VALUES (
+					NULL , ?, ?, ?, ?, ?);";
 	
-	static private $delete = "DELETE FROM aprobasevento WHERE id= ?";
+	static private $delete = "DELETE FROM evento WHERE id= ?";
 	
-	static private $select = "SELECT * FROM aprobasevento";
+	static private $select = "SELECT * FROM evento";
 
-    static private $eventosHome    = "SELECT * FROM aprobasevento ORDER BY id DESC LIMIT 0,3";
+    static private $eventosHome    = "SELECT * FROM evento ORDER BY id DESC LIMIT 0,3";
 	
-	static private $atualizar = "UPDATE aprobasevento SET titulo = ? , descricao = ? , dataEvento = ? , precoAssociado = ? , precoAvulso = ? where id = ?";
+	static private $atualizar = "UPDATE evento SET titulo = ? , descricao = ? , dataEvento = ? , precoAssociado = ? , precoAvulso = ? where id = ?";
 	
 	private $conecta;
 	private $evento;
@@ -21,14 +21,15 @@ class DaoEvento{
 	}
 	
 	function inserir(){
-	
+	//print_r($this->evento);
+	//exit;	
 	$stmt = $this->conecta->getConexao()->prepare(self::$insert);
-	$stmt->bind_param("ssssss",$this->evento->getTitulo(),
+	
+	$stmt->bind_param("sssss",$this->evento->getTitulo(),
 							   $this->evento->getDescricao(),
 							   $this->evento->getDataEvento(),
 							   $this->evento->getPrecoAssociado(),
-							   $this->evento->getPrecoAvulso(),
-							   $this->evento->getStatus());
+							   $this->evento->getPrecoAvulso());							   
 	$stmt->execute();
 	}
 		
@@ -48,7 +49,7 @@ class DaoEvento{
 	}
 	
 	function visualizarID($id){
-	$stmt = $this->conecta->getConexao()->query("SELECT * FROM aprobasevento WHERE id= $id");
+	$stmt = $this->conecta->getConexao()->query("SELECT * FROM evento WHERE id= $id");
 	$dados = $stmt->fetch_array();
 	return $dados;
 	}

@@ -10,12 +10,12 @@ session_start();
 
 
 <div id="topo">
-<? include("subpagina/navegacao.php")?>
+<?php include("subpagina/navegacao.php")?>
 </div>
 
 
 <div id="principal">
-<? include("subpagina/inserirVideo.php")?>
+<?php include("subpagina/inserirVideo.php")?>
 </div>
 
 

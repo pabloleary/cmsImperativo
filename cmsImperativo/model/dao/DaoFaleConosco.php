@@ -1,11 +1,11 @@
-<?
+<?php
 class DaoFaleConosco{
 private $conecta;
 private $faleConosco;
 
-static private $insert = "INSERT INTO `aprobasfaleconosco` VALUES ( NULL , ?, ?, ?,?);";	
-	static private $delete = "DELETE FROM aprobasfaleconosco WHERE id= ?";
-	static private $select = "SELECT * FROM `aprobasfaleconosco`"; 
+static private $insert = "INSERT INTO `faleconosco` VALUES ( NULL , ?, ?, ?,?);";	
+	static private $delete = "DELETE FROM faleconosco WHERE id= ?";
+	static private $select = "SELECT * FROM `faleconosco`"; 
 
 	function __construct(FaleConosco $faleConosco,Conecta $conecta){
 		$this->faleConosco = $faleConosco;

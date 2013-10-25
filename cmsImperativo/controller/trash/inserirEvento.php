@@ -1,4 +1,4 @@
-<?
+<?php
 include("../model/Conecta.php");
 include("../model/beans/Evento.php");
 include("../model/dao/DaoEvento.php");

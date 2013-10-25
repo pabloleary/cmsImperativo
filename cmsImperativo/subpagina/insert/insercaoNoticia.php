@@ -1,6 +1,6 @@
 <br />
 <div class="acao">
-<a href="home.php">Visualizar Notícias</a>
+<a href="home.php">View News</a>
 <!--
 <img src="criar.gif">
 <img src="editar.gif">
@@ -9,30 +9,33 @@
 </div>
 <br />
 <div class="corpodados">
-<form action="controller/inserirNoticia.php" method="post">
+<form action="controller/NewsController.php?action=insert" method="post">
 <table>
 <tr>
 <td><label for="status">Status</label>
-publicar<input type="radio" name="status" value="publicar"></td>
+Publish<input type="radio" name="status" value="publicar"></td>
 </tr>
 <tr>
 <td>
-rascunho<input type="radio" name="status" value="rascunho"></td>
+Draft<input type="radio" name="status" value="rascunho"></td>
 </tr>
 </table>
-<label for="nome">Título
+<label for="nome">Title
 <input type="text" name="titulo"/>
 </label>
-<label for="resumo">Resumo Conteúdo
+<label for="resumo">Resume
 <textarea name="resumo" rows="2" cols="20">
 </textarea>
 </label>
-<label for="descricao">Conteúdo
+<label for="conteudo">Content
 <textarea name="conteudo" rows="2" cols="20">
 </textarea>
 </label>
+<label for="date">Date
+<input type="text" name="date"/>
+</label>
 <label for="submit">
-<input class ="botaoTamanho" type="submit" name="submit" value="enviar Noticia"/>
+<input class ="botaoTamanho" type="submit" name="submit" value="Insert News"/>
 </label>
 </form>
 </div>

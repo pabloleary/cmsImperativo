@@ -1,6 +1,6 @@
 <br />
 <div class="acao">
-<a href="home.php">Visualizar Notícias</a>
+<a href="home.php">View News</a>
 <!--
 <img src="criar.gif">
 <img src="editar.gif">
@@ -10,26 +10,26 @@
 </div>
 <br />
 <div class="corpodados">
-<form action="controller/update/atualizarNoticia.php?id=<?=$dados['id']?>" method="post">
-<label for="status" class="radio">Disponibilidade<br>
-		  publico <input type="radio" name="status" value="publico" class="radio" >
-		  privado <input type="radio" name="status" value="privado" class="radio">
+<form action="controller/NewsController.php?id=<?php print $dados['id']?>&action=update" method="post">
+<label for="status" class="radio">Available<br>
+		  Public <input type="radio" name="status" value="publico" class="radio" >
+		  Private <input type="radio" name="status" value="privado" class="radio">
 		  </label><br />
-<label for="nome">Título
-<input type="text" name="titulo" value="<?=$dados['titulo']?>"/>
+<label for="nome">Title
+<input type="text" name="titulo" value="<?php print $dados['titulo']?>"/>
 </label>
-<label for="resumo">Resumo Conteúdo
+<label for="resumo">Resume
 <textarea name="resumo" rows="2" cols="20">
-<?=$dados['resumo']?>
+<?php print $dados['resumo']?>
 </textarea>
 </label>
-<label for="descricao">Conteúdo
+<label for="descricao">Content
 <textarea name="conteudo" rows="2" cols="20">
-<?=$dados['conteudo']?>
+<?php print $dados['conteudo']?>
 </textarea>
 </label>
 <label for="submit">
-<input class ="botaoTamanho" type="submit" name="submit" value="enviar Noticia"/>
+<input class ="botaoTamanho" type="submit" name="submit" value="Update News"/>
 </label>
 </form>
 </div>

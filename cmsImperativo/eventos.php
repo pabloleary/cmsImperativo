@@ -6,14 +6,16 @@ include("controller/logando.php");
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <head>
 <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
 </head>
 <body>
 <div id="topo">
-<? include("subpagina/navegacao.php")?>
+
+<?php include("subpagina/navegacao.php")?>
 </div>
 
 <div id="principal">
-<? include("subpagina/evento.php")?>
+<?php include("subpagina/evento.php")?>
 </div>
 
 <div id="rodape">

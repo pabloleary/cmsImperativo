@@ -6,8 +6,6 @@ include("../../model/dao/DaoCategoria.php");
 //print $_POST["paiCategoria"];
 
 $categoria = new Categoria($_POST["categoria"],$_POST["paiCategoria"]);
-//print_r($categoria);
-
 $conexao      = new Conecta();
 $daoCategoria = new DaoCategoria($categoria,$conexao);
 
