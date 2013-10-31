@@ -10,11 +10,6 @@ print "</pre>";
 <br />
 <div class="acao">
 <a href="userRegister.php">Add User</a>
-&nbsp;&nbsp;&nbsp;
-<a href="cadastroDeUsuario.php">Add Aditional User Professional Information</a>
-&nbsp;&nbsp;&nbsp;
-<a href="cadastroDeUsuarioComum.php">Add Aditional User Information</a>
-
 
 <!--
 <img src="criar.gif">
@@ -58,10 +53,10 @@ print "</pre>";
       UserStatus
     </td>
 	 <td align="center">
-    <a href="controller/insertUserRegister.php?action=update&id=<?php print $value['id']?>"> <img src="img/editar.gif"/></a>
+    <a href="controller/UserRegisterController.php?action=update&id=<?php print $value['id']?>"> <img src="img/editar.gif"/></a>
     </td>
 	<td align="center">
-     <a href="controller/insertUserRegister.php?action=update&id=<?php print $value['id']?>"><img src="img/apagar.gif"/></a>
+     <a href="controller/UserRegisterController.php?action=update&id=<?php print $value['id']?>"><img src="img/apagar.gif"/></a>
     </td>
 	</tr>
 <?php 

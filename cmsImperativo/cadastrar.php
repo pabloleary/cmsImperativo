@@ -16,16 +16,11 @@ include("controller/insertUserRegister.php");
 </div>
 
 <div id="nav">
-
 </div>
 
 <div id="principal">
 <?php include("subpagina/cadastrados.php")?>
 </div>
-
-
-
-
 
 </body>
 </html>

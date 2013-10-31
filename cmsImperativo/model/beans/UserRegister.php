@@ -1,11 +1,13 @@
 <?php
 class UserRegister {
 
+	private $name;
 	private $email;
 	private $password;
 	private $id;
 
-	function __construct($email = null, $password = null) {
+	function __construct($name = null, $email = null, $password = null) {
+		$this->setName($name);
 		$this->setEmail($email);
 		$this->setPassword($password);
 		
@@ -36,6 +38,14 @@ class UserRegister {
 
 	public function setU($id) {
 		$this->id = $id;
+	}
+	
+	public function getName() {
+		return $this->name;
+	}
+	
+	public function setName($name) {
+		$this->name = $name;
 	}
 }
 /*

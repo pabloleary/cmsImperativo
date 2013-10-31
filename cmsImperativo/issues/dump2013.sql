@@ -160,4 +160,18 @@ CREATE TABLE `FaleConosco` (
 INSERT INTO `FaleConosco` VALUES(NULL, 'nome', 'email', 'mensagem', '15/ 7/ 2008');
 INSERT INTO `FaleConosco` VALUES(NULL, 'nome', 'email', 'mensagem', '30/ 7/ 2008');
 
+DROP TABLE IF EXISTS `cms`.`address`;
+CREATE TABLE  `cms`.`address` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,    
+  `address` varchar(300) NOT NULL,
+  `city` varchar(100) NOT NULL,
+  `postalcode` int(100) NOT NULL,  
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=latin1;
+
+
+
+
+
+
 

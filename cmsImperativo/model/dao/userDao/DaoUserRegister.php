@@ -5,7 +5,7 @@ class DaoUserRegister{
 	private $modelUserRegister;
 
 	static private $insert = "INSERT INTO `user` VALUES (
-						NULL , ? , ?);";
+						NULL , ? , ? , ?);";
 
 	static private $select = "SELECT * FROM `user`";
 	
@@ -28,7 +28,8 @@ class DaoUserRegister{
 
 	function insert(){
 		$stmt = $this->conecta->getConexao()->prepare(self::$insert);		
-		$stmt->bind_param("ss",$this->modelUserRegister->getEmail(),
+		$stmt->bind_param("sss",$this->modelUserRegister->getName(),
+							   $this->modelUserRegister->getEmail(),
 							   $this->modelUserRegister->getPassword());                             
 		$stmt->execute();
 	}

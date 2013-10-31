@@ -20,6 +20,7 @@ class UserController {
 	}
 	
 	function processDataForm(){		
+		$this->modelUserController->setName($this->dataForm["nameuser"]);
 		$this->modelUserController->setEmail($this->dataForm["emailuser"]);
 		$this->modelUserController->setPassword($this->dataForm["password"]);		
 	}

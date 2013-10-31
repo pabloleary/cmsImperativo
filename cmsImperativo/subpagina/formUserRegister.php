@@ -53,11 +53,16 @@ background-color:#99CC00;
  &nbsp;&nbsp;&nbsp;
  
 
-<form method="post" action="controller/insertUserRegister.php" >  
+<form method="post" action="controller/UserRegisterController.php?action=insert" >  
      <fieldset>
      <legend>User Info</legend>
+    
+     <label>Name:<input id="name" type="text" name="nameuser" />
+    </label>
+    
       <label>E-mail:<input id="email" type="text" name="emailuser" />
     </label>  
+       
       <label>Password</label>       
         <input id="password" type="text" name="password" />
     </label>
