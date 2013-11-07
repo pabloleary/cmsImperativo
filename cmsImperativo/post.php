@@ -1,7 +1,7 @@
 <?php
 session_start();
 include("controller/logando.php");
-include("controller/CategoryController.php");
+include("controller/NewsController.php");
 ?>
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
@@ -15,8 +15,14 @@ include("controller/CategoryController.php");
 <?php include("navigation.php")?>
 </div>
 
+
 <div id="principal">
-<?php include("subpagina/upload.php")?>
+<?php include("subpagina/post.php")?>
+</div>
+
+
+<div id="rodape">
+<h2><p></p></h2>
 </div>
 
 

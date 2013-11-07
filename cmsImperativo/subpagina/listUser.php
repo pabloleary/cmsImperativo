@@ -24,9 +24,6 @@ print "</pre>";
 <th align="left">id</th>
 <th align="left">Name</th>
 <th align="left">Login</th>
-<th align="left">Initial Date</th>
-<th align="left">End Date</th>
-<th align="left">User Status</th>
 <th align="center">Update</th>
 <th align="center">Delete</th>
 </tr>
@@ -43,20 +40,13 @@ print "</pre>";
 ?>
 <tr>
 	<td align="left"><?php print $value['id']?></td>
-    <td align="left"> <a href="cadastroUnico.php?id=<?php print $value['id']?>">name</a></td>
+    <td align="left"> <a href="cadastroUnico.php?id=<?php print $value['id']?>"><?php print $value['name']?></a></td>
     <td align="left"><?php print $value["login"]?></td>
-    <td align="left">InitialDate</td>
-    <td> 
-     EndDate
-    </td>
-    <td>
-      UserStatus
-    </td>
 	 <td align="center">
     <a href="controller/UserRegisterController.php?action=update&id=<?php print $value['id']?>"> <img src="img/editar.gif"/></a>
     </td>
 	<td align="center">
-     <a href="controller/UserRegisterController.php?action=update&id=<?php print $value['id']?>"><img src="img/apagar.gif"/></a>
+     <a href="controller/UserRegisterController.php?action=delete&id=<?php print $value['id']?>"><img src="img/apagar.gif"/></a>
     </td>
 	</tr>
 <?php 

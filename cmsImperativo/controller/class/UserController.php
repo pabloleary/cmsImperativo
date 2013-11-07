@@ -36,6 +36,14 @@ class UserController {
 		return $this->daoUserRegister->findAll();
 	}
 	
-
+	function deleteUser($id){
+		$this->daoUserRegister->setConecta($this->conecta);
+		$this->daoUserRegister->delete($id);
+	}
+	
+	function updateUser($id){
+		$this->daoUserRegister->setConecta($this->conecta);
+		$this->daoUserRegister->update($id);
+	} 
 }
 ?>

@@ -1,6 +1,6 @@
 <br />
 <div class="acao">
-<a href="home.php">View News</a>
+<a href="post.php">View News</a>
 <!--
 <img src="criar.gif">
 <img src="editar.gif">
@@ -10,16 +10,7 @@
 <br />
 <div class="corpodados">
 <form action="controller/NewsController.php?action=insert" method="post">
-<table>
-<tr>
-<td><label for="status">Status</label>
-Publish<input type="radio" name="status" value="publicar"></td>
-</tr>
-<tr>
-<td>
-Draft<input type="radio" name="status" value="rascunho"></td>
-</tr>
-</table>
+
 <label for="nome">Title
 <input type="text" name="titulo"/>
 </label>

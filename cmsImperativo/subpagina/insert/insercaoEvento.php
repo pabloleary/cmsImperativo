@@ -1,18 +1,10 @@
 <br />
 <div class="acao">
-<a href="eventos.php">Event View</a>
+<a href="schedule.php">Event View</a>
 </div>
 <br />
 <div class="corpodados">
 <form action="controller/inserirEvento.php" method="post">
-
-<table>
-<tr><td><label for="status">Status</label>
-Publish<input type="radio" name="status" value="publicar"></td></tr>
-<tr><td>Draft<input type="radio" name="status" value="rascunho"></td></tr>
-</table>
-
-
 <label for="nome">Title
 <input type="text" name="titulo"/>
 </label>
@@ -31,14 +23,12 @@ Publish<input type="radio" name="status" value="publicar"></td></tr>
 <option value="<?php print $i?>"><?php print $i?></option>
 <?php }?>
 </select>
-
 <select name="ano">
 <?php for($i=2008;$i<=2010;$i++){?>
 <option value="<?php print $i?>"><?php print $i?></option>
 <?}?>
 </select>
 </label>
-
 <label for="precoCadastrado">Price Member
 <input type="text" name="precoAssociado"/>
 </label>

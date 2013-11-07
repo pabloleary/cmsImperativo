@@ -1,6 +1,6 @@
 <br />
 <div class="acao">
-<a href="arquivos.php">View Files</a>
+<a href="repository.php">View Files</a>
 </div>
 <br />
 <div class="corpodados">

@@ -2,7 +2,6 @@
 session_start();
 include("controller/logando.php");
 include("controller/NewsController.php");
-
 ?>
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
@@ -13,12 +12,12 @@ include("controller/NewsController.php");
 
 
 <div id="topo">
-<?php include("subpagina/navegacao.php")?>
+<?php include("navigation.php")?>
 </div>
 
 
 <div id="principal">
-<?php include("subpagina/noticia.php")?>
+<?php include("subpagina/home.php")?>
 </div>
 
 

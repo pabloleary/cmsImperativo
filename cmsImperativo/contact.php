@@ -1,7 +1,6 @@
 <?php
 session_start();
-include("controller/logando.php");
-include("controller/insertUserRegister.php");
+include("controller/logando.php"); 
 ?>
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
@@ -12,14 +11,18 @@ include("controller/insertUserRegister.php");
 
 
 <div id="topo">
-<?php include("subpagina/navegacao.php")?>
+<?php include("navigation.php")?>
 </div>
 
 <div id="nav">
+
 </div>
 
 <div id="principal">
-<?php include("subpagina/cadastrados.php")?>
+<?php include("subpagina/faleConosco.php")?>
+</div>
+
+
 </div>
 
 </body>

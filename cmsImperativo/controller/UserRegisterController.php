@@ -35,9 +35,10 @@ if (!empty ($_GET)) {
 	}
 
 	if ($_GET["action"] == "delete") {
-
+		$userService->deleteUser($_GET["id"]);
+		header("Location:../cadastrar.php");
 	}
-
+	
 	if ($_GET["action"] == "view") {
 
 	}

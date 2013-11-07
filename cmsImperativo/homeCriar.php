@@ -8,10 +8,8 @@ include("controller/logando.php");
 <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
 <body id="duascolunas">
-
-
 <div id="topo">
-<?php include("subpagina/navegacao.php")?>
+<?php include("navigation.php")?>
 </div>
 
 <div id="principal">

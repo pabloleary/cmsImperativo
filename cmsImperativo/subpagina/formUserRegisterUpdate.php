@@ -56,10 +56,14 @@ background-color:#99CC00;
 <form method="post" action="controller/insertUserRegister.php" >  
      <fieldset>
      <legend>User Info</legend>
-      <label>E-mail:<input id="email" type="text" name="emailuser" />
+     
+         <label>Name:<input id="name" type="text" name="nameuser" value=<?php print $data[""]?>/>
+    </label>
+     
+      <label>E-mail:<input id="email" type="text" name="emailuser" value=<?php print $data[""]?>/>
     </label>  
       <label>Password</label>       
-        <input id="password" type="text" name="password" />
+        <input id="password" type="text" name="password" value=<?php print $data[""]?>/>
     </label>
   
  </fieldset>

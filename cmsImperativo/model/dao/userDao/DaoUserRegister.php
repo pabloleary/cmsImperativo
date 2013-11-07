@@ -11,6 +11,8 @@ class DaoUserRegister{
 	
 	static private $findById = "SELECT * FROM `user` WHERE id = ?";
 	
+	static private $update = "UPDATE user SET name = ? , login = ? , password = ? WHERE id = ?";	
+	
 	static private $delete = "DELETE FROM `user` WHERE id = ?";
 
 	function __construct(UserRegister  $modelRegister = null,Conecta $conecta = null){
@@ -60,9 +62,13 @@ class DaoUserRegister{
 	print b;
 	}
     
-	function atualizar(){}
+	function update($id){
+		$stmt = $this->conecta->getConexao()->prepare(self::$update);
+		$stmt->bind_param('i', $id );
+		$stmt->execute();
+	}
 		
-	function deletar($id){
+	function delete($id){
 		$stmt = $this->conecta->getConexao()->prepare(self::$delete);
 		$stmt->bind_param('i', $id );
 		$stmt->execute();
